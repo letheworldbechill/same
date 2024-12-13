@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulative Taktiken erkennen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <h1>Reaktionen auf Manipulation: Unbewusst vs. Bewusst</h1>
+    </header>
+    <main>
+        <div class="section-container">
+            <!-- Unbewusste Reaktionen -->
+            <section id="unwissend">
+                <h2>Unbewusste Reaktionen</h2>
+                <div class="button-container">
+                    <button onclick="showUnwissend(0)">Verunsicherung</button>
+                    <button onclick="showUnwissend(1)">Empathie und Schuldgefühle</button>
+                    <button onclick="showUnwissend(2)">Kompromissbereitschaft</button>
+                    <button onclick="showUnwissend(3)">Unbewusste Anpassung</button>
+                    <button onclick="showUnwissend(4)">Erhöhte Leistungsbereitschaft</button>
+                    <button onclick="showUnwissend(5)">Frustration und Ärger</button>
+                    <button onclick="showUnwissend(6)">Vermeidung oder Rückzug</button>
+                    <button onclick="showUnwissend(7)">Verstärkte Analyse</button>
+                    <button onclick="showUnwissend(8)">Ignorieren der Warnsignale</button>
+                    <button onclick="showUnwissend(9)">Fehlende Gegenwehr</button>
+                </div>
+                <div id="unwissend-text" class="reaction-text"></div>
+            </section>
+
+            <!-- Bewusste Reaktionen -->
+            <section id="wissend">
+                <h2>Bewusste Reaktionen</h2>
+                <div class="button-container">
+                    <button onclick="showWissend(0)">Innere Ruhe bewahren</button>
+                    <button onclick="showWissend(1)">Nicht rechtfertigen</button>
+                    <button onclick="showWissend(2)">Klare Grenzen setzen</button>
+                    <button onclick="showWissend(3)">Grauer Fels</button>
+                    <button onclick="showWissend(4)">Angriffe ignorieren</button>
+                    <button onclick="showWissend(5)">Distanzieren</button>
+                    <button onclick="showWissend(6)">Faktenorientiert bleiben</button>
+                    <button onclick="showWissend(7)">Keine Erwartungen setzen</button>
+                    <button onclick="showWissend(8)">Selbstfürsorge</button>
+                    <button onclick="showWissend(9)">Professionelle Hilfe</button>
+                </div>
+                <div id="wissend-text" class="reaction-text"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Reaktionen auf Manipulation. Alle Rechte vorbehalten.</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('./sw.js')
+            .then((registration) => {
+              console.log('Service Worker registered:', registration);
+            })
+            .catch((error) => {
+              console.log('Service Worker registration failed:', error);
+            });
+        }
+      </script>      
+</body>
+</html>
